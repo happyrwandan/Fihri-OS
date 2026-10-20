@@ -27,7 +27,7 @@ Features:
 
 Features coming soon! 
 - OS talks to the user and takes action based on the user preferences
-- Jarvis enabled - voice interaction with CanLinux
+- Jarvis enabled - voice interaction with ZinxOS
 - Join Windows or any domain!
 
 Coming soon! Zinx Server 1.0 with the following feature:
