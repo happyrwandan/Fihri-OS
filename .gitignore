@@ -1,0 +1,113 @@
+# =============================================================================
+# Zinx OS - .gitignore
+# Public consumer-facing repository: branding, docs, screenshots, issue
+# templates. Built ISOs and images are distributed via GitHub Releases /
+# external hosting, never via git objects (see the ISO publishing docs).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Disk images & build artifacts (NEVER committed - distributed via Releases)
+# -----------------------------------------------------------------------------
+*.iso
+*.img
+*.img.gz
+*.qcow2
+*.vmdk
+*.vdi
+*.squashfs
+*.tar
+*.tar.gz
+*.tgz
+*.tar.xz
+*.txz
+*.tar.zst
+*.zst
+*.deb
+*.changes
+*.buildinfo
+*.dsc
+*.udeb
+*.sha256
+*.md5
+/build/
+/out/
+/dist/
+/artifacts/
+/binary/
+/chroot/
+/.build/
+live-image.*
+
+# -----------------------------------------------------------------------------
+# Secrets, keys & credentials (ZERO tolerance - never commit)
+# -----------------------------------------------------------------------------
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+*.pem
+*.key
+*.p12
+*.pfx
+*.gpg
+*.asc
+auth.json
+.env
+.env.*
+*.secret
+*.secrets
+secrets/
+.secrets/
+.gnupg/
+.ssh/
+*.keystore
+credentials*
+*token*.json
+
+# -----------------------------------------------------------------------------
+# Runtime / generated junk
+# -----------------------------------------------------------------------------
+*.log
+logs/
+*.pid
+*.sock
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+core
+core.*
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# -----------------------------------------------------------------------------
+# Editor / IDE / OS junk
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.directory
+.Trash-*/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.sublime-workspace
+*.kate-swp
+
+# -----------------------------------------------------------------------------
+# NOTE: screenshots/ IS intentionally TRACKED.
+# README marketing images live there; keep them small (<5 MB each) and
+# Zinx-branded only. Do NOT add ignore rules for screenshots/.
+# -----------------------------------------------------------------------------
