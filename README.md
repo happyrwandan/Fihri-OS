@@ -1,70 +1,100 @@
 # Zinx OS 1.0 is here!
 
+**A beautiful, private, Windows-familiar Linux desktop.**
+
+Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
+
 ## Screenshots
 
 ![Zinx OS 1.0 desktop](screenshots/zinx-os-1.0-desktop-20261020.png)
 
 *Zinx OS 1.0 desktop*
 
-What's special about this Linux Distro?
+## Zinx OS 1.0 vs Windows 11
 
-- Built-assembled in Canada
-- Ubuntu 24 base 
-- Beautiful interface similar to Mac OS
-- RDP - Remote desktop enabled
-- Thousands of opensource application from the app store
-- Secure Brave Browser as the default browser
-- UFW uncomplicated firewall enabled by default
-- Office support: Word, Power point, Excel from OnlyOffice enabled 
-- Timeshift backup utiliy
-- Developers - VS Code enabled
-- Designers - Adobe suit replacement available
-- Gamers - thousands of free game available
+| | Windows 11 | Zinx OS 1.0 |
+|---|---|---|
+| **Price** | Paid license | **Free** — download, install, and share |
+| **Office suite** | Microsoft 365 subscription | **CryptPad included** — encrypted and private; docs, sheets, slides, and forms; works offline; no cloud account required; zero telemetry |
+| **Updates** | Forced reboots on Microsoft's schedule | **User-controlled, selectable updates** — a Windows-style list with a details pane; pick exactly what to install and when to reboot |
+| **Remote Desktop** | RDP | **Full-session RDP with H.264** — up to 41x less bandwidth in our tests; bidirectional clipboard; resize-aware cursors; session handoff (walk up to the machine and your session follows you) |
+| **Active Directory** | Manual domain join | **Auto-detects the domain when you plug in the cable**, with a guided join wizard |
+| **Telemetry** | Extensive | **None** — local-first by design |
+| **Customization** | Limited | **Full theme engine** — light/dark, rounded corners, translucent dock |
+| **App feedback** | — | **Built-in Zinx Feedback app** — privacy-safe and consent-gated |
+| **Backup** | — | **Timeshift system snapshots included** |
+| **Online account** | Pushes a Microsoft account | **None required** — a local account is all you need |
+| **Ads & sponsored apps** | Yes — Start-menu suggestions and promoted apps | **None** — no ads, no sponsored apps, ever |
+| **Crash reporting** | Sent to Microsoft | **None** — vendor crash reporting is disabled; diagnostics never leave the machine |
+| **Open source** | Closed source | **GPLv3** — every line is open and auditable |
+| **Malware resistance** | Signature-AV treadmill | **Linux permission model by design** — polkit-mediated privileges, no everyday admin rights |
+| **Firewall** | Built-in | **Built-in UFW firewall, enabled by default** — incoming denied, outgoing allowed |
 
+## 🎨 Beautiful by default
 
-======================================================================================
+- Deepin Desktop Environment with a translucent fashion-mode dock and rounded corners
+- Launchpad with adaptive icons
+- Light and dark themes
+- Display scaling that applies without logging out
 
-Features: 
-- Auto detects crashes and attempts to fix the crash
-- Creates a separate during the installation drive as restore point
-- Auto backup if all goes well then will delete last 2 back ups to save space
-- Auto install hardware, graphic cards during installation - best for Linux gaming
-- Auto detects location and sets the timezones
+## 🔒 CryptPad office, included
 
-Features coming soon! 
-- OS talks to the user and takes action based on the user preferences
-- Jarvis enabled - voice interaction with ZinxOS
-- Join Windows or any domain!
+- Private, encrypted office suite: documents, spreadsheets, slides, and forms
+- On-demand design — 0 MB used while idle
+- Works fully offline
+- Opens `.docx`, `.xlsx`, `.pptx`, and `.odt` files by default
 
-Coming soon! Zinx Server 1.0 with the following feature:
+## 🔄 Windows-style updates, under your control
 
-1. Domain & Directory Server
-- Seamlessly replace or supplement Microsoft Active Directory®.
-- Domain Controller: Set up as a stand-alone server or as an additional domain controller (DC) in a Windows domain.
-- Group Policy Management: Use RSAT (Remote Server Administration Tools) to manage Group Policies.
-- Client Integration: Join Windows® clients to the domain with no disruption to users.
-- No CALs Required: Cost-effective alternative to Windows Server®.
+- Selectable update list with a details pane — see exactly what each update does
+- Security updates grouped for quick review
+- Clear reboot banner instead of surprise restarts
+- GitHub-powered CryptPad updates keep the office suite current
 
-2. Mail Server
-- Modern Webmail: Includes a webmail interface and ActiveSync support.
-- Unlimited Virtual Mail Domains: Host multiple email domains on a single server.
-- User Management: Manage users via Zinx Server's interface or integrate with Microsoft® Active Directory.
-- Industry-Standard Protocols: Supports SMTP, POP3, and IMAP.
+## 🏢 Enterprise-ready
 
-3. Gateway & Infrastructure Server
-- Network Services: Unified management of DNS, DHCP, VPN, firewall, HTTP proxy, and more.
-- Secure Internet Access: Domain-based HTTPS web page blocking and user authentication for the HTTP proxy.
-- Backup: Built-in backup solutions for data protection.
-- Certificate Authority (CA): Manage SSL/TLS certificates for internal and external services.
+- Active Directory auto-detection when the network cable is plugged in
+- Guided domain join wizard built on realmd/sssd
+- Polkit-secured operations, including a GUI leave flow
 
-4. Technical Support
-- Comprehensive Coverage: Support for all Zinx Server features.
-- Expert Assistance: Provided by the official Zinx Support Team.
-- Migration Support: Best-effort support for migrations from Windows Server.
+## 🖥️ Remote Desktop done right
 
-5. Additional Features
-- Real-time Alerts: Stay informed about server status and issues.
-- Daily Reports: Automated reports for system health and usage.
-- Kernel Management: Easy kernel updates and management.
+- Full-session RDP
+- H.264 encoding — up to 41x less bandwidth in our tests
+- Bidirectional clipboard
+- Server-side, resize-aware cursors
+- Single-session handoff with lock: walk up to the machine and your session follows
 
+## 🛡️ Security & privacy
 
+- **No telemetry, no crash uploads** — vendor crash reporting (apport/whoopsie) is disabled; diagnostics never leave the machine
+- **No ads, no sponsored apps, no forced online account**
+- **Open and auditable** — GPLv3-licensed, top to bottom
+- **Linux permission model by design** — polkit privilege separation, no everyday admin rights
+- **Privacy-gated RDP** — the physical screen blanks while you're remoted in, and the session locks when you disconnect
+- Local-first Zinx Feedback app with automatic secret redaction, gated by your consent
+- System services listen on loopback only — CryptPad binds to `127.0.0.1`
+- **systemd-hardened local services** — ProtectSystem=strict, NoNewPrivileges, PrivateTmp
+- **UFW firewall enabled by default** — default-deny incoming, default-allow outgoing
+- **Timeshift system snapshots** for fast, easy recovery
+
+## 📦 Curated apps, ready to go
+
+- **Brave** browser and **Thunderbird** mail
+- **VLC** media player
+- **CryptPad** as the default office suite (replacing OnlyOffice)
+- **Timeshift** backups and **GParted** partition editor
+- The Deepin application suite: Files, Terminal, Text Editor, Calendar, Music, Movie, Album, Draw, Reader, Screen Recorder, Calculator, and System Monitor
+
+## 🪨 Built on solid ground
+
+- Ubuntu 24.04 LTS base with its security update stream
+- Five-year support window from the LTS lifecycle
+- Free and open-source under the GNU GPLv3 license
+
+## Download and get involved
+
+- **[Releases](https://github.com/happyrwandan/Zinx-OS/releases)** — download Zinx OS 1.0
+- **[Issues](https://github.com/happyrwandan/Zinx-OS/issues)** — feedback and bug reports; public testers are welcome
+
+Zinx OS is licensed under the [GNU General Public License v3.0](LICENSE).
