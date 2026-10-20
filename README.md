@@ -1,5 +1,11 @@
 # Zinx OS 1.0 is here!
 
+## Screenshots
+
+![Zinx OS 1.0 desktop](screenshots/zinx-os-1.0-desktop-20261020.png)
+
+*Zinx OS 1.0 desktop*
+
 What's special about this Linux Distro?
 
 - Built-assembled in Canada
