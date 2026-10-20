@@ -25,7 +25,7 @@ Features:
 - Auto install hardware, graphic cards during installation - best for Linux gaming
 - Auto detects location and sets the timezones
 
-Zinx OS Premium version coming soon! 
+Features coming soon! 
 - OS talks to the user and takes action based on the user preferences
 - Jarvis enabled - voice interaction with CanLinux
 - Join Windows or any domain!
