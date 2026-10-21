@@ -29,25 +29,34 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 | **Open source** | Closed source | **GPLv3** — every line is open and auditable |
 | **Malware resistance** | Signature-AV treadmill | **Linux permission model by design** — polkit-mediated privileges, no everyday admin rights |
 | **Firewall** | Built-in | **Built-in UFW firewall, enabled by default** — incoming denied, outgoing allowed |
+| **Driver updates** | Bundled into Windows Update | **Dedicated Driver Updates section in the updater** — scans your hardware, lists proprietary and open drivers with recommended flags, one click to switch |
+| **Gaming** | Xbox app, Microsoft Store | **Steam one click away** — the updater's Driver Updates section installs Steam (multiverse + 32-bit libraries handled for you) |
+| **Docking stations** | Usually plug-and-play | **DisplayLink support included** — USB docks and DisplayLink monitors work out of the box (evdi driver preinstalled for the shipped kernels) |
 
 ## 🎨 Beautiful by default
 
 - Deepin Desktop Environment with a translucent fashion-mode dock and rounded corners
-- Launchpad with adaptive icons
+- Launchpad with adaptive icons that stay crisp at every display scale
 - Light and dark themes
+- Consistent, pixel-matched right-click menus across the dock and launcher, with pure-contrast tooltips and popups that stay readable on any wallpaper
+- Smooth, pixel-precise trackpad scrolling (macOS-like) out of the box
 - Display scaling that applies without logging out
 
 ## 🔒 CryptPad office, included
 
 - Private, encrypted office suite: documents, spreadsheets, slides, and forms
-- On-demand design — 0 MB used while idle
-- Works fully offline
+- Familiar **ribbon-style toolbar** — feels like a modern office suite from the first click
+- On-demand design — the backend starts when you open it and sleeps when you're done (0 MB while idle)
+- Works fully offline; cloud sync greys itself out when you're offline instead of failing
 - Opens `.docx`, `.xlsx`, `.pptx`, and `.odt` files by default
+- OnlyOffice removed — CryptPad is the single, integrated office suite
 
 ## 🔄 Windows-style updates, under your control
 
 - Selectable update list with a details pane — see exactly what each update does
 - Security updates grouped for quick review
+- **Driver Updates section** — hardware scan with recommended/open/proprietary flags (ubuntu-drivers engine), one click to switch GPU, Wi-Fi, and other drivers
+- **Steam one-click install** from the same window (multiverse and 32-bit libraries set up automatically)
 - Clear reboot banner instead of surprise restarts
 - GitHub-powered CryptPad updates keep the office suite current
 
@@ -56,6 +65,7 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 - Active Directory auto-detection when the network cable is plugged in
 - Guided domain join wizard built on realmd/sssd
 - Polkit-secured operations, including a GUI leave flow
+- No plaintext credentials anywhere in the join pipeline — covered by an automated test suite (71 tests)
 
 ## 🖥️ Remote Desktop done right
 
@@ -64,6 +74,10 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 - Bidirectional clipboard
 - Server-side, resize-aware cursors
 - Single-session handoff with lock: walk up to the machine and your session follows
+- Left-handed friendly — a mouse button-swap toggle applies to both local and remote sessions
+- Stale-connection guard: a dropped client never locks you out of your own machine
+- Works with the Windows 11 24H2 Remote Desktop client (bitmap-fallback compatibility included)
+- Keyboard layout and CapsLock/NumLock stay in sync between the remote client and the machine
 
 ## 🛡️ Security & privacy
 
@@ -84,7 +98,9 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 - **VLC** media player
 - **CryptPad** as the default office suite (replacing OnlyOffice)
 - **Timeshift** backups and **GParted** partition editor
+- **Zinx Feedback** — built-in, consent-gated feedback tool with automatic secret redaction
 - The Deepin application suite: Files, Terminal, Text Editor, Calendar, Music, Movie, Album, Draw, Reader, Screen Recorder, Calculator, and System Monitor
+- **DisplayLink-ready** — USB-C docks and DisplayLink monitors work out of the box (evdi driver preinstalled for the shipped kernels)
 
 ## 🪨 Built on solid ground
 
