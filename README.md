@@ -1,18 +1,18 @@
-# Zinx OS 1.0 is here!
+# Fihri OS 1.0 is here!
 
 **A beautiful, private, Windows-familiar Linux desktop.**
 
-Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
+Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
 
 ## Screenshots
 
-![Zinx OS 1.0 desktop](screenshots/zinx-os-1.0-desktop-20261020.png)
+![Fihri OS 1.0 desktop](screenshots/fihri-os-1.0-desktop-20261020.png)
 
-*Zinx OS 1.0 desktop*
+*Fihri OS 1.0 desktop — this capture predates the Fihri rebrand and will be replaced with a freshly branded screenshot.*
 
-## Zinx OS 1.0 vs Windows 11
+## Fihri OS 1.0 vs Windows 11
 
-| | Windows 11 | Zinx OS 1.0 |
+| | Windows 11 | Fihri OS 1.0 |
 |---|---|---|
 | **Price** | Paid license | **Free** — download, install, and share |
 | **Office suite** | Microsoft 365 subscription | **CryptPad included** — encrypted and private; docs, sheets, slides, and forms; works offline; no cloud account required; zero telemetry |
@@ -21,7 +21,7 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 | **Active Directory** | Manual domain join | **Auto-detects the domain when you plug in the cable**, with a guided join wizard |
 | **Telemetry** | Extensive | **None** — local-first by design |
 | **Customization** | Limited | **Full theme engine** — light/dark, rounded corners, translucent dock |
-| **App feedback** | — | **Built-in Zinx Feedback app** — privacy-safe and consent-gated |
+| **App feedback** | — | **Built-in Fihri Feedback app** — privacy-safe and consent-gated |
 | **Backup** | — | **Timeshift system snapshots included** |
 | **Online account** | Pushes a Microsoft account | **None required** — a local account is all you need |
 | **Ads & sponsored apps** | Yes — Start-menu suggestions and promoted apps | **None** — no ads, no sponsored apps, ever |
@@ -86,7 +86,7 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 - **Open and auditable** — GPLv3-licensed, top to bottom
 - **Linux permission model by design** — polkit privilege separation, no everyday admin rights
 - **Privacy-gated RDP** — the physical screen blanks while you're remoted in, and the session locks when you disconnect
-- Local-first Zinx Feedback app with automatic secret redaction, gated by your consent
+- Local-first Fihri Feedback app with automatic secret redaction, gated by your consent
 - System services listen on loopback only — CryptPad binds to `127.0.0.1`
 - **systemd-hardened local services** — ProtectSystem=strict, NoNewPrivileges, PrivateTmp
 - **UFW firewall enabled by default** — default-deny incoming, default-allow outgoing
@@ -98,7 +98,7 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 - **VLC** media player
 - **CryptPad** as the default office suite (replacing OnlyOffice)
 - **Timeshift** backups and **GParted** partition editor
-- **Zinx Feedback** — built-in, consent-gated feedback tool with automatic secret redaction
+- **Fihri Feedback** — built-in, consent-gated feedback tool with automatic secret redaction
 - The Deepin application suite: Files, Terminal, Text Editor, Calendar, Music, Movie, Album, Draw, Reader, Screen Recorder, Calculator, and System Monitor
 - **DisplayLink-ready** — USB-C docks and DisplayLink monitors work out of the box (evdi driver preinstalled for the shipped kernels)
 
@@ -110,7 +110,7 @@ Zinx OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubu
 
 ## Download and get involved
 
-- **[Releases](https://github.com/happyrwandan/Zinx-OS/releases)** — download Zinx OS 1.0
-- **[Issues](https://github.com/happyrwandan/Zinx-OS/issues)** — feedback and bug reports; public testers are welcome
+- **[Releases](../../releases)** — download Fihri OS 1.0
+- **[Issues](../../issues)** — feedback and bug reports; public testers are welcome
 
-Zinx OS is licensed under the [GNU General Public License v3.0](LICENSE).
+Fihri OS is licensed under the [GNU General Public License v3.0](LICENSE).

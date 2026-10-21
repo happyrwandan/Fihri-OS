@@ -1,5 +1,5 @@
 # =============================================================================
-# Zinx OS - .gitignore
+# Fihri OS - .gitignore
 # Public consumer-facing repository: branding, docs, screenshots, issue
 # templates. Built ISOs and images are distributed via GitHub Releases /
 # external hosting, never via git objects (see the ISO publishing docs).
@@ -109,5 +109,5 @@ desktop.ini
 # -----------------------------------------------------------------------------
 # NOTE: screenshots/ IS intentionally TRACKED.
 # README marketing images live there; keep them small (<5 MB each) and
-# Zinx-branded only. Do NOT add ignore rules for screenshots/.
+# Fihri-branded only. Do NOT add ignore rules for screenshots/.
 # -----------------------------------------------------------------------------
