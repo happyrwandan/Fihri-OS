@@ -6,9 +6,19 @@ Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ub
 
 ## Screenshots
 
-![Fihri OS 1.0 desktop](screenshots/fihri-os-1.0-desktop-20261020.png)
+![Fihri OS 1.0 desktop — Fihri wallpaper and translucent fashion-mode dock](screenshots/fihri-os-1.0-desktop.png)
 
-*Fihri OS 1.0 desktop — this capture predates the Fihri rebrand and will be replaced with a freshly branded screenshot.*
+*Fihri OS 1.0 desktop — Fihri wallpaper with the translucent fashion-mode dock.*
+
+| | | |
+|---|---|---|
+| ![ElixirOffice start page](screenshots/fihri-os-1.0-elixiroffice.png)<br>**ElixirOffice** — start page with templates | ![ElixirOffice Writer](screenshots/fihri-os-1.0-elixiroffice-writer.png)<br>**ElixirOffice Writer** — Word-compatible editing | ![ElixirOffice Spreadsheet](screenshots/fihri-os-1.0-elixiroffice-spreadsheet.png)<br>**ElixirOffice Spreadsheet** — Excel-compatible sheets |
+| ![ElixirOffice Presentation](screenshots/fihri-os-1.0-elixiroffice-presentation.png)<br>**ElixirOffice Presentation** — PowerPoint-compatible slides | ![CryptPad rich text pad](screenshots/fihri-os-1.0-cryptpad.png)<br>**CryptPad** — encrypted office with a ribbon toolbar | ![Launchpad app grid](screenshots/fihri-os-1.0-launchpad.png)<br>**Launchpad** — windowed app grid with categories |
+| ![Deepin File Manager](screenshots/fihri-os-1.0-files.png)<br>**Files** — Deepin File Manager | ![Brave Browser new tab](screenshots/fihri-os-1.0-browser.png)<br>**Brave Browser** — privacy-first browsing | ![Control Center settings grid](screenshots/fihri-os-1.0-settings.png)<br>**Control Center** — system settings |
+| ![Deepin Terminal](screenshots/fihri-os-1.0-terminal.png)<br>**Terminal** — Deepin Terminal | ![Deepin Draw canvas](screenshots/fihri-os-1.0-draw.png)<br>**Draw** — quick sketches and annotation | ![Deepin Calculator](screenshots/fihri-os-1.0-calculator.png)<br>**Calculator** — Deepin Calculator |
+| ![Deepin Music library](screenshots/fihri-os-1.0-music.png)<br>**Music** — Deepin Music player | ![Fihri OS Updates list](screenshots/fihri-os-1.0-updates.png)<br>**Fihri OS Updates** — choose what to install | ![Fihri Feedback form](screenshots/fihri-os-1.0-feedback.png)<br>**Fihri Feedback** — consent-gated, secret-redacted |
+
+Capture method and per-app notes: [screenshots/MANIFEST.md](screenshots/MANIFEST.md).
 
 ## Fihri OS 1.0 vs Windows 11
 
