@@ -4,62 +4,92 @@
 
 Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
 
+- 📦 **Download:** [Releases](../../releases) — `fihri-os-1.0-amd64.iso` (4.68 GiB)
+- 📋 **What's in 1.0:** [RELEASE-NOTES.md](RELEASE-NOTES.md)
+- 📊 **Full release report** (requirements, Windows 11 comparison, measurements, clean-profile audit): [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
+
 ## Screenshots
 
-![Fihri OS 1.0 desktop — Fihri wallpaper and translucent fashion-mode dock](screenshots/fihri-os-1.0-desktop.png)
+![Fihri OS 1.0 desktop — themed wallpaper and translucent dock](screenshots/fihri-os-1.0-desktop.png)
 
-*Fihri OS 1.0 desktop — Fihri wallpaper with the translucent fashion-mode dock.*
+*Fihri OS 1.0 desktop — captured on the reference machine, 2026-11-01.*
 
 | | | |
 |---|---|---|
-| ![ElixirOffice start page](screenshots/fihri-os-1.0-elixiroffice.png)<br>**ElixirOffice** — start page with templates | ![ElixirOffice Writer](screenshots/fihri-os-1.0-elixiroffice-writer.png)<br>**ElixirOffice Writer** — Word-compatible editing | ![ElixirOffice Spreadsheet](screenshots/fihri-os-1.0-elixiroffice-spreadsheet.png)<br>**ElixirOffice Spreadsheet** — Excel-compatible sheets |
-| ![ElixirOffice Presentation](screenshots/fihri-os-1.0-elixiroffice-presentation.png)<br>**ElixirOffice Presentation** — PowerPoint-compatible slides | ![CryptPad rich text pad](screenshots/fihri-os-1.0-cryptpad.png)<br>**CryptPad** — encrypted office with a ribbon toolbar | ![Launchpad app grid](screenshots/fihri-os-1.0-launchpad.png)<br>**Launchpad** — windowed app grid with categories |
-| ![Deepin File Manager](screenshots/fihri-os-1.0-files.png)<br>**Files** — Deepin File Manager | ![Brave Browser new tab](screenshots/fihri-os-1.0-browser.png)<br>**Brave Browser** — privacy-first browsing | ![Control Center settings grid](screenshots/fihri-os-1.0-settings.png)<br>**Control Center** — system settings |
-| ![Deepin Terminal](screenshots/fihri-os-1.0-terminal.png)<br>**Terminal** — Deepin Terminal | ![Deepin Draw canvas](screenshots/fihri-os-1.0-draw.png)<br>**Draw** — quick sketches and annotation | ![Deepin Calculator](screenshots/fihri-os-1.0-calculator.png)<br>**Calculator** — Deepin Calculator |
-| ![Deepin Music library](screenshots/fihri-os-1.0-music.png)<br>**Music** — Deepin Music player | ![Fihri OS Updates list](screenshots/fihri-os-1.0-updates.png)<br>**Fihri OS Updates** — choose what to install | ![Fihri Feedback form](screenshots/fihri-os-1.0-feedback.png)<br>**Fihri Feedback** — consent-gated, secret-redacted |
+| ![Windowed launcher](screenshots/fihri-os-1.0-launchpad.png)<br>**Launcher** — app grid with working search | ![Deepin File Manager](screenshots/fihri-os-1.0-files.png)<br>**Files** — Computer view with quick-access sidebar | ![Fihri OS Updates list](screenshots/fihri-os-1.0-updates.png)<br>**Fihri OS Updates** — choose what to install |
+| ![ElixirOffice start page](screenshots/fihri-os-1.0-elixiroffice.png)<br>**ElixirOffice** — start page with templates | ![CryptPad home](screenshots/fihri-os-1.0-cryptpad.png)<br>**CryptPad** — encrypted office, document grid | ![Remote Work wizard](screenshots/fihri-os-1.0-remote.png)<br>**Remote Work** — Citrix / VMware Horizon / RDP wizard |
+| ![Quick Actions panel](screenshots/fihri-os-1.0-quickpanel.png)<br>**Quick Actions panel** — notifications + widgets | ![Fihri Feedback form](screenshots/fihri-os-1.0-feedback.png)<br>**Fihri Feedback** — consent-gated, secret-redacted | ![ElixirOffice Writer](screenshots/fihri-os-1.0-elixiroffice-writer.png)<br>**ElixirOffice Writer** — Word-compatible editing |
+| ![ElixirOffice Spreadsheet](screenshots/fihri-os-1.0-elixiroffice-spreadsheet.png)<br>**ElixirOffice Spreadsheet** — Excel-compatible sheets | ![ElixirOffice Presentation](screenshots/fihri-os-1.0-elixiroffice-presentation.png)<br>**ElixirOffice Presentation** — PowerPoint-compatible slides | ![Brave Browser new tab](screenshots/fihri-os-1.0-browser.png)<br>**Brave Browser** — privacy-first browsing |
+| ![Control Center settings grid](screenshots/fihri-os-1.0-settings.png)<br>**Control Center** — system settings | ![Deepin Terminal](screenshots/fihri-os-1.0-terminal.png)<br>**Terminal** — Deepin Terminal | ![Deepin Draw canvas](screenshots/fihri-os-1.0-draw.png)<br>**Draw** — quick sketches and annotation |
+| ![Deepin Calculator](screenshots/fihri-os-1.0-calculator.png)<br>**Calculator** — Deepin Calculator | ![Deepin Music library](screenshots/fihri-os-1.0-music.png)<br>**Music** — Deepin Music player | |
 
-Capture method and per-app notes: [screenshots/MANIFEST.md](screenshots/MANIFEST.md).
+The showcase set (desktop, launcher, files, updates, ElixirOffice, CryptPad, Remote Work, Quick Actions, Feedback) was refreshed on 2026-11-01. Capture method and per-app notes: [screenshots/MANIFEST.md](screenshots/MANIFEST.md).
+
+## System requirements (measured)
+
+Measured on the reference machine (i5-8250U, 12 GB RAM, Intel UHD 620, 1920×1080) — full data in the [release report](docs/FIHRI-OS-1.0-REPORT.md#1-system-requirements-measured-on-this-machine).
+
+| Resource | Minimum | Preferred |
+|---|---|---|
+| **RAM** | 4 GB (installer blocks below) | 8 GB (DDE core ≈ 0.9–1.1 GB; browser session ≈ 2.1 GB) |
+| **Storage** | 32 GB (installer blocks below) | 64 GB SSD (installed tree is 13.5 GB + updates/snapshots) |
+| **CPU** | 64-bit x86-64, dual-core | 4+ cores (whole desktop+apps measured at ~3% of a 4C/8T i5) |
+| **GPU** | Any Mesa-supported Intel/AMD GPU; llvmpipe software fallback works | Intel/AMD hardware GL (NVIDIA proprietary optional, consent-based offer) |
+| **Display** | 1366×768 | 1920×1080 (validated; multi-monitor supported) |
+| **Install media** | 8 GB USB | — |
+| **Network** | Optional at install | Broadband for updates and remote-work use |
+
+## Install
+
+1. Download `fihri-os-1.0-amd64.iso` from [Releases](../../releases) and verify the published SHA-256.
+2. Write it to a USB stick (≥ 8 GB) with [balenaEtcher](https://etcher.balena.io/), [Rufus](https://rufus.ie/) (DD mode) or `dd if=fihri-os-1.0-amd64.iso of=/dev/sdX bs=4M status=progress oflag=sync`.
+3. Boot from the USB (the live session is a full Fihri OS desktop — take it for a spin).
+4. Launch **Install Fihri OS** (Calamares): erase disk, replace a previous OS, install **alongside Windows**, or manual partitioning. Swap defaults to RAM size (hibernate-capable) and is user-adjustable, including none.
+5. Reboot into Fihri OS. Everything in the screenshots above is preinstalled — no account, no activation, no telemetry opt-outs to hunt for.
+
+Notes: the installer requires ≥ 4 GB RAM and ≥ 32 GB storage. On NVIDIA hardware, first graphical boot shows a one-time **consent dialog** for the tested proprietary driver — declining is remembered and nothing installs silently.
 
 ## Fihri OS 1.0 vs Windows 11
 
 | | Windows 11 | Fihri OS 1.0 |
 |---|---|---|
-| **Price** | Paid license | **Free** — download, install, and share |
-| **Office suite** | Microsoft 365 subscription | **CryptPad included** — encrypted and private; docs, sheets, slides, and forms; works offline; no cloud account required; zero telemetry |
-| **Updates** | Forced reboots on Microsoft's schedule | **User-controlled, selectable updates** — a Windows-style list with a details pane; pick exactly what to install and when to reboot |
-| **Remote Desktop** | RDP | **Full-session RDP with H.264** — up to 41x less bandwidth in our tests; bidirectional clipboard; resize-aware cursors; session handoff (walk up to the machine and your session follows you) |
-| **Active Directory** | Manual domain join | **Auto-detects the domain when you plug in the cable**, with a guided join wizard |
-| **Telemetry** | Extensive | **None** — local-first by design |
-| **Customization** | Limited | **Full theme engine** — light/dark, rounded corners, translucent dock |
-| **App feedback** | — | **Built-in Fihri Feedback app** — privacy-safe and consent-gated |
-| **Backup** | — | **Timeshift system snapshots included** |
+| **Price** | Paid license ($139 Home / $199 Pro per device) | **Free** — download, install, and share |
+| **Remote Desktop (host)** | Pro/Enterprise only — Home cannot host RDP | **Full-session RDP server on every install** — H.264, clipboard, session handoff, works with the Windows 11 24H2 client |
+| **Office suite** | Microsoft 365 subscription | **ElixirOffice + CryptPad included** — DOCX/XLSX/PPTX/ODF editing locally; encrypted, self-hosted collaborative pads; no cloud account required |
+| **Updates** | Forced reboots on Microsoft's schedule | **User-controlled, selectable updates** with a details pane and a **Driver Updates** section |
+| **Active Directory** | AD + Entra ID join | **AD join with auto-detection and a guided wizard** (no Entra ID/MDM yet — see limitations) |
+| **Telemetry** | Extensive, mandatory diagnostics | **None** — local-first by design; feedback is consent-gated and secret-redacted |
+| **Disk encryption** | BitLocker everywhere | **Not yet** (top honest gap — see limitations) |
+| **Security / AV** | Defender (ML/reputation/SmartScreen) | **UFW on by default, ClamAV on-access, no telemetry** — signature-based, not ML-backed |
+| **Customization** | Limited | **Full theme engine** — light/dark, 11 themes, accent colors, translucent dock |
+| **Backup** | Restore points + File History | **Timeshift snapshots + Déjà Dup file backup** |
 | **Online account** | Pushes a Microsoft account | **None required** — a local account is all you need |
-| **Ads & sponsored apps** | Yes — Start-menu suggestions and promoted apps | **None** — no ads, no sponsored apps, ever |
-| **Crash reporting** | Sent to Microsoft | **None** — vendor crash reporting is disabled; diagnostics never leave the machine |
+| **Ads & sponsored apps** | Start-menu suggestions, promoted apps | **None** — no ads, no sponsored apps, ever |
+| **Crash reporting** | Sent to Microsoft | **None** — diagnostics never leave the machine |
 | **Open source** | Closed source | **GPLv3** — every line is open and auditable |
-| **Malware resistance** | Signature-AV treadmill | **Linux permission model by design** — polkit-mediated privileges, no everyday admin rights |
-| **Firewall** | Built-in | **Built-in UFW firewall, enabled by default** — incoming denied, outgoing allowed |
-| **Driver updates** | Bundled into Windows Update | **Dedicated Driver Updates section in the updater** — scans your hardware, lists proprietary and open drivers with recommended flags, one click to switch |
-| **Gaming** | Xbox app, Microsoft Store | **Steam one click away** — the updater's Driver Updates section installs Steam (multiverse + 32-bit libraries handled for you) |
-| **Docking stations** | Usually plug-and-play | **DisplayLink support included** — USB docks and DisplayLink monitors work out of the box (evdi driver preinstalled for the shipped kernels) |
+| **AI assistant** | Copilot | None (deliberate scope) |
+
+The full area-by-area comparison with verdicts (including where Windows 11 still wins) is in the [release report](docs/FIHRI-OS-1.0-REPORT.md#2-feature-comparison--fihri-os-10-vs-windows-11).
 
 ## 🎨 Beautiful by default
 
 - Deepin Desktop Environment with a translucent fashion-mode dock and rounded corners
-- Launchpad with adaptive icons that stay crisp at every display scale
-- Light and dark themes
+- Launcher with adaptive icons that stay crisp at every display scale, and Windows-style search that works
+- Quick Actions slide-in panel: notification center plus weather, calendar, memory and world-clock widgets
+- Light and dark themes with live switching and dock/tray contrast bridges
 - Consistent, pixel-matched right-click menus across the dock and launcher, with pure-contrast tooltips and popups that stay readable on any wallpaper
 - Smooth, pixel-precise trackpad scrolling (macOS-like) out of the box
 - Display scaling that applies without logging out
+- DisplayLink support included — USB docks and DisplayLink monitors work out of the box
 
-## 🔒 CryptPad office, included
+## 🔒 Office that respects your privacy
 
-- Private, encrypted office suite: documents, spreadsheets, slides, and forms
-- Familiar **ribbon-style toolbar** — feels like a modern office suite from the first click
-- On-demand design — the backend starts when you open it and sleeps when you're done (0 MB while idle)
+- **ElixirOffice** — native editors for DOCX/XLSX/PPTX/ODF/RTF/CSV
+- **CryptPad** — self-hosted, end-to-end-encrypted collaboration: documents, spreadsheets, slides, forms and more
+- Familiar **ribbon-style toolbars** in both suites
+- CryptPad runs on-demand and loopback-only (binds to 127.0.0.1; 0 MB while idle)
 - Works fully offline; cloud sync greys itself out when you're offline instead of failing
 - Opens `.docx`, `.xlsx`, `.pptx`, and `.odt` files by default
-- OnlyOffice removed — CryptPad is the single, integrated office suite
 
 ## 🔄 Windows-style updates, under your control
 
@@ -68,59 +98,63 @@ Capture method and per-app notes: [screenshots/MANIFEST.md](screenshots/MANIFEST
 - **Driver Updates section** — hardware scan with recommended/open/proprietary flags (ubuntu-drivers engine), one click to switch GPU, Wi-Fi, and other drivers
 - **Steam one-click install** from the same window (multiverse and 32-bit libraries set up automatically)
 - Clear reboot banner instead of surprise restarts
-- GitHub-powered CryptPad updates keep the office suite current
+- Ubuntu 24.04 LTS base: security updates to 2029 (ESM to 2032), plus fwupd firmware updates
 
 ## 🏢 Enterprise-ready
 
 - Active Directory auto-detection when the network cable is plugged in
-- Guided domain join wizard built on realmd/sssd
+- Guided domain join wizard built on realmd/sssd, with a domain field in the installer handed to first-boot join
 - Polkit-secured operations, including a GUI leave flow
 - No plaintext credentials anywhere in the join pipeline — covered by an automated test suite (71 tests)
 
-## 🖥️ Remote Desktop done right
+## 🖥️ Remote work, both directions
 
-- Full-session RDP
-- H.264 encoding — up to 41x less bandwidth in our tests
-- Bidirectional clipboard
-- Server-side, resize-aware cursors
-- Single-session handoff with lock: walk up to the machine and your session follows
-- Left-handed friendly — a mouse button-swap toggle applies to both local and remote sessions
+- **RDP server on every install** — walk up or remote in; NLA + TLS, H.264 (AVC420), bidirectional clipboard, resize-aware cursors, session handoff with lock
+- **Remote Work wizard** for connecting out: Citrix Workspace (preinstalled with the open H.264 plugin, USB, audio/mic/webcam and Teams media config), VMware Horizon (guided setup), and native Windows RDP (FreeRDP with host/user/domain/password, own window)
+- Privacy-gated RDP: the physical screen blanks while you're remoted in, and the session locks when you disconnect
 - Stale-connection guard: a dropped client never locks you out of your own machine
-- Works with the Windows 11 24H2 Remote Desktop client (bitmap-fallback compatibility included)
+- Left-handed friendly — a mouse button-swap toggle applies to both local and remote sessions
 - Keyboard layout and CapsLock/NumLock stay in sync between the remote client and the machine
 
 ## 🛡️ Security & privacy
 
-- **No telemetry, no crash uploads** — vendor crash reporting (apport/whoopsie) is disabled; diagnostics never leave the machine
-- **No ads, no sponsored apps, no forced online account**
-- **Open and auditable** — GPLv3-licensed, top to bottom
+- **No telemetry, no crash uploads, no ads, no forced online account** — vendor crash reporting (apport/whoopsie) is disabled
+- **UFW firewall enabled by default** — default-deny incoming
+- **ClamAV + clamonacc on-access scanning** with fresh definitions at build
 - **Linux permission model by design** — polkit privilege separation, no everyday admin rights
-- **Privacy-gated RDP** — the physical screen blanks while you're remoted in, and the session locks when you disconnect
-- Local-first Fihri Feedback app with automatic secret redaction, gated by your consent
+- **Consent-based driver installs** — nothing installs silently (NVIDIA offer, updates, everything)
+- Local-first **Fihri Feedback** app with 11-pattern secret redaction and zero network calls — you submit the bundle yourself
 - System services listen on loopback only — CryptPad binds to `127.0.0.1`
 - **systemd-hardened local services** — ProtectSystem=strict, NoNewPrivileges, PrivateTmp
-- **UFW firewall enabled by default** — default-deny incoming, default-allow outgoing
 - **Timeshift system snapshots** for fast, easy recovery
 
 ## 📦 Curated apps, ready to go
 
-- **Brave** browser and **Thunderbird** mail
-- **VLC** media player
-- **CryptPad** as the default office suite (replacing OnlyOffice)
+- **Brave** browser (default) and **Chromium** available
+- **Thunderbird** mail (with built-in calendar) and dde-calendar
+- **ElixirOffice** and **CryptPad** as the integrated office stack
+- **VLC** media player plus the Deepin suite: Files, Terminal, Text Editor, Calendar, Music, Movie, Album, Draw, Reader, Screen Recorder, Calculator, System Monitor
 - **Timeshift** backups and **GParted** partition editor
-- **Fihri Feedback** — built-in, consent-gated feedback tool with automatic secret redaction
-- The Deepin application suite: Files, Terminal, Text Editor, Calendar, Music, Movie, Album, Draw, Reader, Screen Recorder, Calculator, and System Monitor
-- **DisplayLink-ready** — USB-C docks and DisplayLink monitors work out of the box (evdi driver preinstalled for the shipped kernels)
+- CUPS printing, Bluetooth, Orca screen reader, on-screen keyboard
+- 2,901 packages preinstalled; thousands more via apt / dde-store (Flathub installable post-install if you want it)
 
-## 🪨 Built on solid ground
+## 🐛 Honest limitations (what's not in 1.0)
 
-- Ubuntu 24.04 LTS base with its security update stream
-- Five-year support window from the LTS lifecycle
-- Free and open-source under the GNU GPLv3 license
+We'd rather tell you up front:
+
+1. **No full-disk encryption yet** — the installer does not offer a BitLocker/LUKS-class encrypted-install path. This is the top gap and a 1.1 candidate.
+2. **No native Microsoft Office** — ElixirOffice and CryptPad cover the formats and collaboration well, but they are not MS Office; power-MS-Office users will notice.
+3. **ClamAV is signature-based** — no Defender-grade ML/reputation engine or browse-time SmartScreen.
+4. **No Entra ID join / MDM (Intune)** — classic AD join is included; cloud identity management is not.
+5. **No Windows-Hello biometrics, no Copilot, no Snap-layouts tiling, no Xbox/Game Bar, no WSL.**
+6. **Driver breadth relies on the kernel** plus explicit NVIDIA/firmware paths — no automatic vendor-driver back-catalog.
+7. **Flathub/Flatpak not preinstalled** (installable post-install), and fewer consumer-brand store apps than Windows.
 
 ## Download and get involved
 
 - **[Releases](../../releases)** — download Fihri OS 1.0
 - **[Issues](../../issues)** — feedback and bug reports; public testers are welcome
+- **[RELEASE-NOTES.md](RELEASE-NOTES.md)** — 1.0 highlights
+- **[docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)** — the full release report: measured system requirements, Windows 11 comparison, Citrix/VMware clean-profile audit, QA state
 
-Fihri OS is licensed under the [GNU General Public License v3.0](LICENSE).
+Fihri OS is licensed under the [GNU General Public License v3.0](LICENSE). The distribution additionally contains components under their own upstream licenses (Ubuntu/Debian packages, Deepin DDE under GPL-compatible terms, Brave, Thunderbird, ElixirOffice, CryptPad under their respective licenses); each component's license ships in the installed image.
