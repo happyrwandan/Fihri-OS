@@ -4,7 +4,7 @@
 
 Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
 
-- 📦 **Download:** [Releases](../../releases) — `fihri-os-1.0-amd64.iso` (5.12 GiB, SHA-256 `2139bf893ab31204f466a1a79a6ac07687017ac032c709a270d1b1ab75568a77`)
+- 📦 **Download:** [Releases](../../releases) — `fihri-os-1.0-amd64.iso` (5.12 GiB, SHA-256 `f2a70ebff3bf535fd7e52c1e75951fc9804616e43eeb20c4ccfa22ffd4954f07`; QEMU boot-verified on the final image: BIOS + UEFI boot, desktop renders, full Calamares install with swap ≥ RAM)
 - 📋 **What's in 1.0:** [RELEASE-NOTES.md](RELEASE-NOTES.md)
 - 📊 **Full release report** (requirements, Windows 11 comparison, measurements, clean-profile audit): [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
 

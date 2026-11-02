@@ -2,7 +2,8 @@
 
 **Showcase set refreshed on 2026-11-01 (evening pass)** on the Fihri OS 1.0
 reference machine (1920×1080, light theme) against the desktop state that
-ships in the rebuilt 1.0 ISO (`2139bf89…`, sealed 2026-11-01): final theme
+ships in the rebuilt 1.0 ISO (`f2a70ebf…`, reseal 2026-11-01, final r4
+rewrap 2026-11-02): final theme
 engine, filled icon set, hero wallpaper as the fresh-user default, windowed
 launcher, Quick Actions panel, and the fixed updater.
 

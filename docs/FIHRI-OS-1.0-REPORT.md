@@ -17,9 +17,9 @@ Microsoft's documented behavior and are marked as such.
 | OS name / version | Fihri OS 1.0 (`/etc/os-release`: `ID=ubuntu`, base Ubuntu 24.04.5 LTS "noble") |
 | Desktop | Deepin DDE 6.x on X11 (deepin-kwin-x11, LightDM greeter) |
 | Kernel | Linux 6.8.0-147-generic |
-| ISO image | `fihri-os-1.0-amd64.iso`, 5,494,874,112 bytes (5.12 GiB) — **2026-11-01 reseal** (supersedes the 2026-10-29 draft build, 5,020,581,888 bytes) |
-| ISO SHA-256 | `2139bf893ab31204f466a1a79a6ac07687017ac032c709a270d1b1ab75568a77` (7-gate verify pass, 2026-11-01; the draft build's `8414d41c…` hash is historical only) |
-| Compressed rootfs (squashfs) | 5,396,381,696 bytes (5.02 GiB); 2,920 packages in manifest (draft: 2,901) |
+| ISO image | `fihri-os-1.0-amd64.iso`, 5,494,874,112 bytes (5.12 GiB) — **2026-11-01 reseal, final r4 rewrap 2026-11-02** (supersedes the 2026-10-29 draft build, 5,020,581,888 bytes) |
+| ISO SHA-256 | `f2a70ebff3bf535fd7e52c1e75951fc9804616e43eeb20c4ccfa22ffd4954f07` (final r4 image; 7-gate verify pass on the reseal, QEMU boot-verified on r4: BIOS + UEFI, desktop renders, full Calamares install with swap ≥ RAM; the reseal r1 `2139bf89…` and draft `8414d41c…` hashes are historical only) |
+| Compressed rootfs (squashfs) | 5,396,393,984 bytes (5.02 GiB); 2,920 packages in manifest (draft: 2,901) |
 | Uncompressed payload | ~12.0 GiB source tree → **13.5 GB raw installed tree** (clone `du -xs` = 13,788,024,832 B) |
 | Installer | Calamares 3.3.5 (erase / replace / alongside-Windows / manual; swap defaults to RAM size) |
 | Update channels shipped | Ubuntu noble + noble-updates + noble-backports + noble-security, UbuntuDDE stable PPA, Brave repo, Fihri repo |
@@ -37,7 +37,7 @@ Microsoft's documented behavior and are marked as such.
 | **CPU** | 64-bit x86-64, dual-core | 4+ cores (reference: i5-8250U 4C/8T) | Live session with apps open measured at ~24% of one core (≈3% of the 8-core reference CPU) |
 | **GPU** | Any Mesa-supported GPU (Intel/AMD open drivers); software rendering fallback (llvmpipe) works | Intel/AMD hardware GL; NVIDIA proprietary optional | Intel UHD 620 validated; NVIDIA path via consent-based offer |
 | **Display** | 1366×768 | 1920×1080 (validated); virtual screens up to 16384×16384 | eDP-1 1920×1080@60 native; multi-monitor supported |
-| **Boot/Install media** | 8 GB USB | — | ISO is 4.68 GiB |
+| **Boot/Install media** | 8 GB USB | — | ISO is 5.12 GiB |
 | **Network** | Optional at install; required for updates | Broadband for Citrix/Horizon/RDP use | internet check is advisory (`check:`, not `required:`) |
 
 ### 1.2 RAM — measurements
@@ -56,7 +56,7 @@ Live measurements on the reference machine (students desktop session, uid 1000):
 ### 1.3 Storage — measurements
 
 * Installed raw tree: **13.5 GB** (`du -xs` of the cloned rootfs: 13,788,024,832 B; breakdown `/usr` 8.6 G, `/opt` 3.6 G, `/var` 636 M, `/boot` 124 M).
-* Squashfs compresses that 12.0 GiB source to 4.51 GiB (ratio 37.5%); ISO totals 4.68 GiB.
+* Squashfs compresses the ~12.7 GiB tree to 5.02 GiB (ratio 39.6%, r4 build log); ISO totals 5.12 GiB.
 * **Policy:** installer `requiredStorage: 32` (GiB) **blocks** below 32 GB; 64 GB recommended (advisory) — SSD recommended so updates, Timeshift snapshots and mail profiles stay comfortable. The old UbuntuDDE default (20 GB) was deliberately raised after measuring the real payload (evidence: `canlinux-work/sysreq-20261028/`).
 * Swap defaults to RAM size at install (hibernate-capable choice), user-adjustable down to none in the installer.
 

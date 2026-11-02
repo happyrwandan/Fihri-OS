@@ -1,8 +1,8 @@
 # Fihri OS 1.0 — Release Notes
 
-**Release date:** 2026-11-01
+**Release date:** 2026-11-02
 **Image:** `fihri-os-1.0-amd64.iso` — 5,494,874,112 bytes (5.12 GiB)
-**SHA-256:** `2139bf893ab31204f466a1a79a6ac07687017ac032c709a270d1b1ab75568a77`
+**SHA-256:** `f2a70ebff3bf535fd7e52c1e75951fc9804616e43eeb20c4ccfa22ffd4954f07`
 **Base:** Ubuntu 24.04.5 LTS "noble" · Deepin DDE 6.x on X11 · Linux 6.8
 **Full report:** [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
 
@@ -11,11 +11,14 @@ Windows-familiar desktop for students and everyday work, measured and
 validated end-to-end on real hardware (Acer Aspire A515-51G, i5-8250U,
 12 GB RAM, Intel UHD 620 + GeForce MX150, 1920×1080).
 
-> **About this build:** the published image is the **2026-11-01 reseal**
-> of 1.0. An earlier draft build (sealed 2026-10-29) was superseded: the
-> desktop landed its final October fixes after that seal, so the image was
-> rebuilt from the finished live system and re-verified (7-gate ISO
-> verification, zero failures) before release. Verify the SHA-256 above
+> **About this build:** the published image is the **final 2026-11-02 rewrap
+> (r4)** of the 2026-11-01 reseal. An earlier draft build (sealed 2026-10-29)
+> was superseded: the desktop landed its final October fixes after that seal,
+> so the image was rebuilt from the finished live system and re-verified
+> (7-gate ISO verification, zero failures) before release. The r4 image was
+> then **QEMU boot-verified end-to-end**: BIOS and UEFI boot both reach the
+> live desktop, the desktop renders correctly, and a full Calamares install
+> run completed with the swap ≥ RAM policy applied. Verify the SHA-256 above
 > after downloading.
 
 ## What the reseal added (changes since the 2026-10-29 draft)
@@ -118,6 +121,9 @@ are documented in [report §3](docs/FIHRI-OS-1.0-REPORT.md#3-citrix--vmware-clea
 - Rebuilt ISO: 7-gate verification pass, zero failures (2026-11-01 —
   size, structure, 2,920-package manifest, fix-presence, secrets sweep,
   accounts, snaps/ClamAV/kernel).
+- **QEMU boot test, final image (2026-11-02)**: boots under both BIOS
+  (SeaBIOS) and UEFI (OVMF), live desktop renders, and a complete
+  Calamares install run finished successfully with swap sized ≥ RAM.
 - RDP: NLA + H.264 + Win11-24H2 bitmap-compat verified; capture
   heartbeat alive.
 - GUI production runner: 32-app sweep 2026-11-01 — 24 apps pass/recovered,
