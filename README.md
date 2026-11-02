@@ -143,18 +143,6 @@ The full area-by-area comparison with verdicts (including where Windows 11 still
 - **7 locales fully staged** — en, fr, es, de, ar, zh-Hans, zh-Hant — with the fonts to match (Noto CJK, Arabic shaping)
 - 2,920 packages preinstalled; thousands more via apt / dde-store (Flathub installable post-install if you want it)
 
-## 🐛 Honest limitations (what's not in 1.0)
-
-We'd rather tell you up front:
-
-1. **No full-disk encryption yet** — the installer does not offer a BitLocker/LUKS-class encrypted-install path. This is the top gap and a 1.1 candidate.
-2. **No native Microsoft Office** — ElixirOffice and CryptPad cover the formats and collaboration well, but they are not MS Office; power-MS-Office users will notice.
-3. **ClamAV is signature-based** — no Defender-grade ML/reputation engine or browse-time SmartScreen.
-4. **No Entra ID join / MDM (Intune)** — classic AD join is included; cloud identity management is not.
-5. **No Windows-Hello biometrics, no Copilot, no Snap-layouts tiling, no Xbox/Game Bar, no WSL.**
-6. **Driver breadth relies on the kernel** plus explicit NVIDIA/firmware paths — no automatic vendor-driver back-catalog.
-7. **Flathub/Flatpak not preinstalled** (installable post-install), and fewer consumer-brand store apps than Windows.
-
 ## Download and get involved
 
 - **[Releases](../../releases)** — download Fihri OS 1.0
