@@ -17,9 +17,9 @@ Microsoft's documented behavior and are marked as such.
 | OS name / version | Fihri OS 1.0 (`/etc/os-release`: `ID=ubuntu`, base Ubuntu 24.04.5 LTS "noble") |
 | Desktop | Deepin DDE 6.x on X11 (deepin-kwin-x11, LightDM greeter) |
 | Kernel | Linux 6.8.0-147-generic |
-| ISO image | `fihri-os-1.0-amd64.iso`, 5,020,581,888 bytes (4.68 GiB) |
-| ISO SHA-256 | `8414d41cff1eb8ac6d31b3a0214722f6b62c21354845a00e8ab5e6031463e9e3` (from `/srv/iso-work/SHA256SUMS`) |
-| Compressed rootfs (squashfs) | 4,842,344,448 bytes (4.51 GiB); 2,901 packages in manifest |
+| ISO image | `fihri-os-1.0-amd64.iso`, 5,494,874,112 bytes (5.12 GiB) — **2026-11-01 reseal** (supersedes the 2026-10-29 draft build, 5,020,581,888 bytes) |
+| ISO SHA-256 | `2139bf893ab31204f466a1a79a6ac07687017ac032c709a270d1b1ab75568a77` (7-gate verify pass, 2026-11-01; the draft build's `8414d41c…` hash is historical only) |
+| Compressed rootfs (squashfs) | 5,396,381,696 bytes (5.02 GiB); 2,920 packages in manifest (draft: 2,901) |
 | Uncompressed payload | ~12.0 GiB source tree → **13.5 GB raw installed tree** (clone `du -xs` = 13,788,024,832 B) |
 | Installer | Calamares 3.3.5 (erase / replace / alongside-Windows / manual; swap defaults to RAM size) |
 | Update channels shipped | Ubuntu noble + noble-updates + noble-backports + noble-security, UbuntuDDE stable PPA, Brave repo, Fihri repo |
@@ -84,7 +84,7 @@ Legend: ✅ matches or better · 🟡 partial / with caveats · ❌ not matched 
 | Area | Fihri OS 1.0 | Windows 11 | Verdict |
 |---|---|---|---|
 | **Desktop / UX** | Deepin DDE: bottom dock with launchpad, Grand Search, notification center, Quick Actions sliding panel, dark/light themes, rounded corners | Taskbar + Start menu, widgets, Snap layouts | ✅ (own visual identity, verified against the Deepin reference VM; Snap-layout window tiling not equivalent) |
-| **Theming** | Light/dark + 11 deepin themes, accent colors, live theme switching with dock/tray contrast bridges, custom wallpapers, lock-screen theming | Light/dark + accent, lock screen "Windows spotlight" | ✅ |
+| **Theming** | Light/dark + 8 shipped deepin themes and a custom theme builder (light & dark variants each), accent colors, live theme switching with write-through and dock/tray contrast bridges, custom wallpapers, lock-screen theming | Light/dark + accent, lock screen "Windows spotlight" | ✅ |
 | **RDP server (remote into the machine)** | FreeRDP 3.31.1 shadow engine (`freerdp2-shadow` unit) on :3389, NLA + TLS, H.264 (AVC420) + Win11-24H2 bitmap-compat, clipboard, session handoff/lock, same password as local login (PAM→SAM auto-sync) | RDP host only on **Pro/Enterprise** — Home cannot be remoted into | ✅ **advantage** (all installs include it; E2E input/auth verified) |
 | **RDP / remote client out** | "Remote Work" wizard: Citrix Workspace, VMware Horizon, Windows RDP (native FreeRDP with host/user/domain/password, own window) | mstsc + store clients | ✅ |
 | **Citrix / VMware Horizon** | Citrix Workspace pre-installed with enhanced open stack (ctxh264 plugin, USB, audio/mic/webcam + Teams media config; .ica/.cr MIME wired); Horizon guided-setup slot, client auto-detected if present | Both available as vendor downloads | ✅ (clean-profile: users add their own accounts — see §3) |
@@ -104,7 +104,7 @@ Legend: ✅ matches or better · 🟡 partial / with caveats · ❌ not matched 
 | **Remote assist** | RDP in/out (§ above); no bundled assist tool (RustDesk/Tailscale exist on the dev reference but are **not shipped** in the ISO) | Quick Assist | 🟡 (RDP covers most; no dedicated attended-assist app shipped) |
 | **Media / codecs** | gstreamer-libav + H.264/H.265 decode paths (4 HEVC decoders incl. Intel QSV), deepin-movie/music/album, screen recorder, camera app | Built-in (HEVC paid extension) | ✅ |
 | **Printing / Bluetooth** | CUPS 2.4.7 + system-config-printer; BlueZ + DDE tray | Native | ✅ |
-| **App store / packages** | dde-store + apt (Ubuntu/UbuntuDDE universe); 2,901 packages preinstalled; flatpak **not shipped** (was on dev machine only) | Microsoft Store + winget | 🟡 (huge apt catalog; fewer consumer-brand store apps; flathub installable post-install) |
+| **App store / packages** | dde-store + apt (Ubuntu/UbuntuDDE universe); 2,920 packages preinstalled (2026-11-01 reseal); flatpak **not shipped** (was on dev machine only) | Microsoft Store + winget | 🟡 (huge apt catalog; fewer consumer-brand store apps; flathub installable post-install) |
 | **Accessibility** | Orca screen reader, onboard OSK, imwheel + DDE accessibility | Narrator, Magnifier, extensive A11y | 🟡 core equivalents present, less polish |
 | **AI assistant** | ❌ none built in | Copilot | ❌ (deliberate scope) |
 | **Cost / licensing** | **$0**, no license keys, no activation | $139 Home / $199 Pro per device | ✅ **advantage** |

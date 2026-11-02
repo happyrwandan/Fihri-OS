@@ -4,26 +4,26 @@
 
 Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
 
-- 📦 **Download:** [Releases](../../releases) — `fihri-os-1.0-amd64.iso` (4.68 GiB)
+- 📦 **Download:** [Releases](../../releases) — `fihri-os-1.0-amd64.iso` (5.12 GiB, SHA-256 `2139bf893ab31204f466a1a79a6ac07687017ac032c709a270d1b1ab75568a77`)
 - 📋 **What's in 1.0:** [RELEASE-NOTES.md](RELEASE-NOTES.md)
 - 📊 **Full release report** (requirements, Windows 11 comparison, measurements, clean-profile audit): [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
 
 ## Screenshots
 
-![Fihri OS 1.0 desktop — themed wallpaper and translucent dock](screenshots/fihri-os-1.0-desktop.png)
+![Fihri OS 1.0 desktop — hero wallpaper, filled icons and translucent dock](screenshots/fihri-os-1.0-desktop.png)
 
-*Fihri OS 1.0 desktop — captured on the reference machine, 2026-11-01.*
+*Fihri OS 1.0 desktop — captured on the reference machine, 2026-11-01, showing the Colorful-Abstraction02 wallpaper that greets every fresh install.*
 
 | | | |
 |---|---|---|
-| ![Windowed launcher](screenshots/fihri-os-1.0-launchpad.png)<br>**Launcher** — app grid with working search | ![Deepin File Manager](screenshots/fihri-os-1.0-files.png)<br>**Files** — Computer view with quick-access sidebar | ![Fihri OS Updates list](screenshots/fihri-os-1.0-updates.png)<br>**Fihri OS Updates** — choose what to install |
+| ![Windowed launcher](screenshots/fihri-os-1.0-launchpad.png)<br>**Launcher** — app grid with working search | ![Deepin File Manager](screenshots/fihri-os-1.0-files.png)<br>**Files** — Computer view with quick-access sidebar | ![Fihri OS Updates list](screenshots/fihri-os-1.0-updates.png)<br>**Fihri OS Updates** — apt + app + driver sections, choose what to install |
 | ![ElixirOffice start page](screenshots/fihri-os-1.0-elixiroffice.png)<br>**ElixirOffice** — start page with templates | ![CryptPad home](screenshots/fihri-os-1.0-cryptpad.png)<br>**CryptPad** — encrypted office, document grid | ![Remote Work wizard](screenshots/fihri-os-1.0-remote.png)<br>**Remote Work** — Citrix / VMware Horizon / RDP wizard |
-| ![Quick Actions panel](screenshots/fihri-os-1.0-quickpanel.png)<br>**Quick Actions panel** — notifications + widgets | ![Fihri Feedback form](screenshots/fihri-os-1.0-feedback.png)<br>**Fihri Feedback** — consent-gated, secret-redacted | ![ElixirOffice Writer](screenshots/fihri-os-1.0-elixiroffice-writer.png)<br>**ElixirOffice Writer** — Word-compatible editing |
-| ![ElixirOffice Spreadsheet](screenshots/fihri-os-1.0-elixiroffice-spreadsheet.png)<br>**ElixirOffice Spreadsheet** — Excel-compatible sheets | ![ElixirOffice Presentation](screenshots/fihri-os-1.0-elixiroffice-presentation.png)<br>**ElixirOffice Presentation** — PowerPoint-compatible slides | ![Brave Browser new tab](screenshots/fihri-os-1.0-browser.png)<br>**Brave Browser** — privacy-first browsing |
-| ![Control Center settings grid](screenshots/fihri-os-1.0-settings.png)<br>**Control Center** — system settings | ![Deepin Terminal](screenshots/fihri-os-1.0-terminal.png)<br>**Terminal** — Deepin Terminal | ![Deepin Draw canvas](screenshots/fihri-os-1.0-draw.png)<br>**Draw** — quick sketches and annotation |
-| ![Deepin Calculator](screenshots/fihri-os-1.0-calculator.png)<br>**Calculator** — Deepin Calculator | ![Deepin Music library](screenshots/fihri-os-1.0-music.png)<br>**Music** — Deepin Music player | |
+| ![Quick Actions panel](screenshots/fihri-os-1.0-quickpanel.png)<br>**Quick Actions panel** — notifications + weather / calendar / memory / world-clock widgets | ![Settings — Personalization](screenshots/fihri-os-1.0-personalization.png)<br>**Settings — Personalization** — the full theme gallery | ![Control Center settings grid](screenshots/fihri-os-1.0-settings.png)<br>**Control Center** — system settings |
+| ![ElixirOffice Writer](screenshots/fihri-os-1.0-elixiroffice-writer.png)<br>**ElixirOffice Writer** — Word-compatible editing | ![ElixirOffice Spreadsheet](screenshots/fihri-os-1.0-elixiroffice-spreadsheet.png)<br>**ElixirOffice Spreadsheet** — Excel-compatible sheets | ![ElixirOffice Presentation](screenshots/fihri-os-1.0-elixiroffice-presentation.png)<br>**ElixirOffice Presentation** — PowerPoint-compatible slides |
+| ![Brave Browser new tab](screenshots/fihri-os-1.0-browser.png)<br>**Brave Browser** — privacy-first browsing | ![Fihri Feedback form](screenshots/fihri-os-1.0-feedback.png)<br>**Fihri Feedback** — consent-gated, secret-redacted | ![Deepin Terminal](screenshots/fihri-os-1.0-terminal.png)<br>**Terminal** — Deepin Terminal |
+| ![Deepin Draw canvas](screenshots/fihri-os-1.0-draw.png)<br>**Draw** — quick sketches and annotation | ![Deepin Calculator](screenshots/fihri-os-1.0-calculator.png)<br>**Calculator** — Deepin Calculator | ![Deepin Music library](screenshots/fihri-os-1.0-music.png)<br>**Music** — Deepin Music player |
 
-The showcase set (desktop, launcher, files, updates, ElixirOffice, CryptPad, Remote Work, Quick Actions, Feedback) was refreshed on 2026-11-01. Capture method and per-app notes: [screenshots/MANIFEST.md](screenshots/MANIFEST.md).
+The showcase set (desktop, launcher, files, updates, ElixirOffice, CryptPad, Remote Work, Quick Actions, Settings + Personalization, Brave) was refreshed on 2026-11-01 after the 1.0 image was resealed. Capture method and per-app notes: [screenshots/MANIFEST.md](screenshots/MANIFEST.md).
 
 ## System requirements (measured)
 
@@ -61,7 +61,8 @@ Notes: the installer requires ≥ 4 GB RAM and ≥ 32 GB storage. On NVIDIA hard
 | **Telemetry** | Extensive, mandatory diagnostics | **None** — local-first by design; feedback is consent-gated and secret-redacted |
 | **Disk encryption** | BitLocker everywhere | **Not yet** (top honest gap — see limitations) |
 | **Security / AV** | Defender (ML/reputation/SmartScreen) | **UFW on by default, ClamAV on-access, no telemetry** — signature-based, not ML-backed |
-| **Customization** | Limited | **Full theme engine** — light/dark, 11 themes, accent colors, translucent dock |
+| **Customization** | Limited | **Full theme engine** — light/dark, 8 themes + custom, accent colors, translucent dock |
+| **Languages out of the box** | Language packs downloaded during/after install | **7 locales fully staged in the image** — English, French, Spanish, German, Arabic, Chinese (Simplified & Traditional) with complete font coverage including Arabic shaping and CJK |
 | **Backup** | Restore points + File History | **Timeshift snapshots + Déjà Dup file backup** |
 | **Online account** | Pushes a Microsoft account | **None required** — a local account is all you need |
 | **Ads & sponsored apps** | Start-menu suggestions, promoted apps | **None** — no ads, no sponsored apps, ever |
@@ -74,10 +75,12 @@ The full area-by-area comparison with verdicts (including where Windows 11 still
 ## 🎨 Beautiful by default
 
 - Deepin Desktop Environment with a translucent fashion-mode dock and rounded corners
+- **Full theme engine**: 8 shipped themes (bloom, flow, hazy-color, macaron, nirvana, organic-glass, square, vintage), each with light & dark variants, plus a custom theme — light/dark flips apply live and write through to every app, with dock/tray contrast bridges that keep popups readable in both modes
 - Launcher with adaptive icons that stay crisp at every display scale, and Windows-style search that works
-- Quick Actions slide-in panel: notification center plus weather, calendar, memory and world-clock widgets
-- Light and dark themes with live switching and dock/tray contrast bridges
-- Consistent, pixel-matched right-click menus across the dock and launcher, with pure-contrast tooltips and popups that stay readable on any wallpaper
+- **Quick Actions slide-in panel**: notification center plus weather, calendar, memory and world-clock widgets
+- **Filled, consistent icon set** across dock, launcher, file manager, system dialogs and the login screen
+- A curated fresh-user wallpaper (plus a full picker), and a deduplicated desktop right-click menu with a working "Set Wallpaper" action
+- Settings search that understands synonyms (mouse / trackpad / pointer…)
 - Smooth, pixel-precise trackpad scrolling (macOS-like) out of the box
 - Display scaling that applies without logging out
 - DisplayLink support included — USB docks and DisplayLink monitors work out of the box
@@ -93,9 +96,10 @@ The full area-by-area comparison with verdicts (including where Windows 11 still
 
 ## 🔄 Windows-style updates, under your control
 
-- Selectable update list with a details pane — see exactly what each update does
+- Sectioned, selectable update list with a details pane — see exactly what each update does
 - Security updates grouped for quick review
-- **Driver Updates section** — hardware scan with recommended/open/proprietary flags (ubuntu-drivers engine), one click to switch GPU, Wi-Fi, and other drivers
+- **Application Updates section** — CryptPad and ElixirOffice updates arrive in the same window as system updates
+- **Driver Updates section** — hardware scan with recommended/open/proprietary flags (ubuntu-drivers engine), one click to switch GPU, Wi-Fi and DisplayLink drivers; NVIDIA hardware gets a consent-gated offer (nothing installs silently)
 - **Steam one-click install** from the same window (multiverse and 32-bit libraries set up automatically)
 - Clear reboot banner instead of surprise restarts
 - Ubuntu 24.04 LTS base: security updates to 2029 (ESM to 2032), plus fwupd firmware updates
@@ -136,7 +140,8 @@ The full area-by-area comparison with verdicts (including where Windows 11 still
 - **VLC** media player plus the Deepin suite: Files, Terminal, Text Editor, Calendar, Music, Movie, Album, Draw, Reader, Screen Recorder, Calculator, System Monitor
 - **Timeshift** backups and **GParted** partition editor
 - CUPS printing, Bluetooth, Orca screen reader, on-screen keyboard
-- 2,901 packages preinstalled; thousands more via apt / dde-store (Flathub installable post-install if you want it)
+- **7 locales fully staged** — en, fr, es, de, ar, zh-Hans, zh-Hant — with the fonts to match (Noto CJK, Arabic shaping)
+- 2,920 packages preinstalled; thousands more via apt / dde-store (Flathub installable post-install if you want it)
 
 ## 🐛 Honest limitations (what's not in 1.0)
 

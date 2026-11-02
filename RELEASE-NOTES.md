@@ -1,7 +1,8 @@
 # Fihri OS 1.0 — Release Notes
 
 **Release date:** 2026-11-01
-**Image:** `fihri-os-1.0-amd64.iso` (4.68 GiB) — see [Releases](../../releases) for the download and SHA-256.
+**Image:** `fihri-os-1.0-amd64.iso` — 5,494,874,112 bytes (5.12 GiB)
+**SHA-256:** `2139bf893ab31204f466a1a79a6ac07687017ac032c709a270d1b1ab75568a77`
 **Base:** Ubuntu 24.04.5 LTS "noble" · Deepin DDE 6.x on X11 · Linux 6.8
 **Full report:** [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
 
@@ -9,6 +10,42 @@ Fihri OS 1.0 is the first public release: a free, privacy-first,
 Windows-familiar desktop for students and everyday work, measured and
 validated end-to-end on real hardware (Acer Aspire A515-51G, i5-8250U,
 12 GB RAM, Intel UHD 620 + GeForce MX150, 1920×1080).
+
+> **About this build:** the published image is the **2026-11-01 reseal**
+> of 1.0. An earlier draft build (sealed 2026-10-29) was superseded: the
+> desktop landed its final October fixes after that seal, so the image was
+> rebuilt from the finished live system and re-verified (7-gate ISO
+> verification, zero failures) before release. Verify the SHA-256 above
+> after downloading.
+
+## What the reseal added (changes since the 2026-10-29 draft)
+
+- **Theme engine, final state** — native XSETTINGS flow; light/dark flips
+  apply live and write through to every application; tray and dock popup
+  contrast fixes (network, Bluetooth, battery, eye-comfort, volume);
+  dark-theme bridge/reassert services; `dde-appearance 1.1.33-1+canlinux3`.
+- **Quick Actions panel** — restored right-to-left slide-in with the full
+  widget set (weather, calendar, memory, world clock) and readable light
+  and dark styling; `dde-tray-loader` / network plugin at `canlinux15`.
+- **Icon fill** — the bloom icon set filled across dock, launcher, file
+  manager and the login screen (101 icons touched, incl. macaron DCI
+  variants).
+- **Fresh-user wallpaper** — the VM-reference hero image
+  (Colorful-Abstraction02) is the out-of-box default, with the full
+  picker set behind it.
+- **Desktop menu fix** — deduplicated right-click menu with a working
+  "Set Wallpaper" action wired to Personalization.
+- **Fihri OS Updates** — contrast-fixed toolbar and sectioned list:
+  apt updates, **Application Updates** (CryptPad, ElixirOffice) and
+  **Driver Updates** (ubuntu-drivers engine; consent-gated NVIDIA offer).
+- **Settings search** — synonym-aware search (mouse / trackpad /
+  pointer…); `dde-control-center 6.0.62-1+canlinux1`.
+- **Fonts & locales** — Noto CJK preference fix; 7 fully staged locales
+  (en, fr, es, de, ar, zh-Hans, zh-Hant) with Arabic shaping and CJK
+  fonts in the image.
+- Plus launcher/dock sort and title-band fixes, eye-comfort light pass,
+  and refreshed first-login desktop entries. 2,920 packages in the
+  shipped manifest.
 
 ## Highlights
 
@@ -78,10 +115,17 @@ are documented in [report §3](docs/FIHRI-OS-1.0-REPORT.md#3-citrix--vmware-clea
 ## QA state at release
 
 - `canlinux-dde-selftest`: 210 pass / 0 fail / 4 skip (2026-10-31).
+- Rebuilt ISO: 7-gate verification pass, zero failures (2026-11-01 —
+  size, structure, 2,920-package manifest, fix-presence, secrets sweep,
+  accounts, snaps/ClamAV/kernel).
 - RDP: NLA + H.264 + Win11-24H2 bitmap-compat verified; capture
   heartbeat alive.
-- GUI production runner: latest sweeps PASS (single-app runs 2026-10-30;
-  showcase set re-captured 2026-11-01).
+- GUI production runner: 32-app sweep 2026-11-01 — 24 apps pass/recovered,
+  8 not-fixable in-runner (the documented known-issues class: RDP-owned
+  session, vision caps — re-validated by the ISO gates on booted images);
+  showcase set re-captured 2026-11-01 evening, with launcher, quick panel,
+  CryptPad and Brave taken via direct launch-capture-close passes after
+  the runner's strict browser-window checks.
 - Broker audit chain: hash-chained, verified intact.
 
 ## License
