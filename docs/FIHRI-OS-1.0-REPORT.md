@@ -1,4 +1,4 @@
-# Fihri OS 1.0 — Students Desktop: Release Summary Report
+# Fihri OS 1.0 — Desktop: Release Summary Report
 
 **Release:** Fihri OS 1.0 (Students Desktop)
 **Report date:** 2026-10-31
