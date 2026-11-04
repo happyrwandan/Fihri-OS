@@ -4,9 +4,23 @@
 
 Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ubuntu 24.04 LTS with the Deepin Desktop Environment. It pairs a polished, modern interface with privacy-respecting defaults, an encrypted office suite, enterprise-friendly domain tools, and a remote desktop experience designed for real work — all at no cost.
 
-- 📦 **Download:** [Releases](../../releases) — `fihri-os-1.0-amd64.iso` ships as three split parts (GitHub's 2 GiB asset cap; reassemble with `cat fihri-os-1.0-amd64.iso.*.part > fihri-os-1.0-amd64.iso`), 5,494,874,112 bytes total (5.12 GiB), SHA-256 `f2a70ebff3bf535fd7e52c1e75951fc9804616e43eeb20c4ccfa22ffd4954f07`; QEMU boot-verified on the final image: BIOS + UEFI boot, desktop renders, full Calamares install with swap ≥ RAM
-- 📋 **What's in 1.0:** [RELEASE-NOTES.md](RELEASE-NOTES.md)
+- 📦 **Download:** [Releases](../../releases) — pick the build for your machine:
+  - **Fihri OS 1.0** — `fihri-os-1.0-amd64.iso` ships as three split parts (GitHub's 2 GiB asset cap; reassemble with `cat fihri-os-1.0-amd64.iso.*.part > fihri-os-1.0-amd64.iso`), 5,494,874,112 bytes total (5.12 GiB), SHA-256 `f2a70ebff3bf535fd7e52c1e75951fc9804616e43eeb20c4ccfa22ffd4954f07`; QEMU boot-verified on the final image: BIOS + UEFI boot, desktop renders, full Calamares install with swap ≥ RAM
+  - **Fihri OS Lean 1.0** — same desktop for 2 GB-RAM / 22 GB-disk machines — see the section below
+- 📋 **What's in 1.0:** [RELEASE-NOTES.md](RELEASE-NOTES.md) · **Lean vs full 1.0:** [RELEASE-NOTES-LEAN.md](RELEASE-NOTES-LEAN.md)
 - 📊 **Full release report** (requirements, Windows 11 comparison, measurements, clean-profile audit): [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
+
+## Fihri OS Lean 1.0 — the same desktop for small machines
+
+[**Lean 1.0**](../../releases/tag/v1.0-lean) is a retuned build of Fihri OS 1.0 for the hardware the full release priced out — old laptops with 2–4 GB RAM and 22–64 GB disks. Same DDE desktop, same office stack, same RDP server, same privacy defaults; the differences are all in the resource budget ([full comparison](RELEASE-NOTES-LEAN.md)):
+
+- **Runs in 2 GB RAM** — the installer RAM floor drops from 4 GB to **2 GB**, and the live desktop itself was verified in QEMU (BIOS + UEFI) at 2 GB with zero OOM kills and ~590–650 MB still available after the desktop settles. zram (`zram-config`) plus a small swap (≤ 10% of disk) and `vm.swappiness=180` stretch little-RAM machines further.
+- **Disk floor lowered 32 GB → 22 GB** — based on the measured 13.34 GiB installed tree (budget: 16 GiB root + EFI + /boot + 2 GiB home + small swap). Real 29–30 GB-class student SSDs now install instead of being stranded; 64 GB SSD stays the recommended size.
+- **Auto partitioning enabled for small disks** — the guided erase-disk layout's root minimum drops 25 GB → 16 GB so it actually completes on those disks (verified end-to-end in QEMU on a real 29.12 GB disk, requirements page reached); manual partitioning remains available.
+- **ClamAV is an App Store offer, not preinstalled** — the 7-package AV stack is out of the base image (−120 MiB ISO); if you want it, one click in the Updates window's Application Updates / Offers section installs the scanner + signature DB with **no resident daemon** (zero idle RAM) and a dormant weekly on-demand scan timer.
+- Plus quieter/faster boot: Samba/ModemManager/crash-reporting masked, 10 boot hogs disabled, 2 s GRUB timeout, reduced desktop effects (dock translucency and themes stay).
+
+Prefer full 1.0 if you have 4 GB+ RAM and 32 GB+ disk and want on-access ClamAV, Samba sharing and full desktop effects out of the box.
 
 ## Screenshots
 
@@ -145,9 +159,9 @@ The full area-by-area comparison with verdicts (including where Windows 11 still
 
 ## Download and get involved
 
-- **[Releases](../../releases)** — download Fihri OS 1.0
+- **[Releases](../../releases)** — download Fihri OS 1.0 or Fihri OS Lean 1.0
 - **[Issues](../../issues)** — feedback and bug reports; public testers are welcome
-- **[RELEASE-NOTES.md](RELEASE-NOTES.md)** — 1.0 highlights
+- **[RELEASE-NOTES.md](RELEASE-NOTES.md)** — 1.0 highlights · **[RELEASE-NOTES-LEAN.md](RELEASE-NOTES-LEAN.md)** — Lean 1.0 vs full 1.0
 - **[docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)** — the full release report: measured system requirements, Windows 11 comparison, Citrix/VMware clean-profile audit, QA state
 
 Fihri OS is licensed under the [GNU General Public License v3.0](LICENSE). The distribution additionally contains components under their own upstream licenses (Ubuntu/Debian packages, Deepin DDE under GPL-compatible terms, Brave, Thunderbird, ElixirOffice, CryptPad under their respective licenses); each component's license ships in the installed image.
