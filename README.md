@@ -10,13 +10,17 @@ Fihri OS 1.0 is a free, open-source (GPLv3) desktop operating system built on Ub
 - 📋 **What's in 1.0:** [RELEASE-NOTES.md](RELEASE-NOTES.md) · **Lean vs full 1.0:** [RELEASE-NOTES-LEAN.md](RELEASE-NOTES-LEAN.md)
 - 📊 **Full release report** (requirements, Windows 11 comparison, measurements, clean-profile audit): [docs/FIHRI-OS-1.0-REPORT.md](docs/FIHRI-OS-1.0-REPORT.md)
 
-## Fihri OS Lean 1.0 — the same desktop for small machines
+## Fihri OS Lean 1.0 r6 — the same desktop for small machines
+
+**Current Lean release: r6**, published under [v1.0-lean](../../releases/tag/v1.0-lean), replacing r3. Reassembled ISO: **5,367,070,720 bytes** (5.00 GiB); SHA-256: `d799b5f97ed5c79a6deb38250d9dca3aa6c43a0af6c303089ca22890f5c61080`. Download all three parts and the signed checksums; [reassembly and verification instructions](RELEASE-NOTES-LEAN.md#download--verify).
+
+r6 makes **Auto (erase disk) the default**, with no disk questions on the default single-disk path; review the erase summary before installing. Live-session **automount is suppressed** to keep target partitions unmounted. **Dual-boot is enabled**, the **22 GB storage floor** is retained, **USB-Ethernet is fixed**, and the installer's **packages backend is fixed**. Choose alongside/manual partitioning explicitly when preserving another OS. See the [r6 changes and verification limits](RELEASE-NOTES-LEAN.md#changes-in-r6).
 
 [**Lean 1.0**](../../releases/tag/v1.0-lean) is a retuned build of Fihri OS 1.0 for the hardware the full release priced out — old laptops with 2–4 GB RAM and 22–64 GB disks. Same DDE desktop, same office stack, same RDP server, same privacy defaults; the differences are all in the resource budget ([full comparison](RELEASE-NOTES-LEAN.md)):
 
 - **Runs in 2 GB RAM** — the installer RAM floor drops from 4 GB to **2 GB**, and the live desktop itself was verified in QEMU (BIOS + UEFI) at 2 GB with zero OOM kills and ~590–650 MB still available after the desktop settles. zram (`zram-config`) plus a small swap (≤ 10% of disk) and `vm.swappiness=180` stretch little-RAM machines further.
 - **Disk floor lowered 32 GB → 22 GB** — based on the measured 13.34 GiB installed tree (budget: 16 GiB root + EFI + /boot + 2 GiB home + small swap). Real 29–30 GB-class student SSDs now install instead of being stranded; 64 GB SSD stays the recommended size.
-- **Auto partitioning enabled for small disks** — the guided erase-disk layout's root minimum drops 25 GB → 16 GB so it actually completes on those disks (verified end-to-end in QEMU on a real 29.12 GB disk, requirements page reached); manual partitioning remains available.
+- **Auto partitioning is the default for small disks** — the guided erase-disk layout's root minimum drops 25 GB → 16 GB. r6 reaches the account page with Next alone on the tested single-disk setup; alongside/manual partitioning remains available for preserving existing systems.
 - **ClamAV is an App Store offer, not preinstalled** — the 7-package AV stack is out of the base image (−120 MiB ISO); if you want it, one click in the Updates window's Application Updates / Offers section installs the scanner + signature DB with **no resident daemon** (zero idle RAM) and a dormant weekly on-demand scan timer.
 - Plus quieter/faster boot: Samba/ModemManager/crash-reporting masked, 10 boot hogs disabled, 2 s GRUB timeout, reduced desktop effects (dock translucency and themes stay).
 
